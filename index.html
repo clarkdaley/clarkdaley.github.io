@@ -1,49 +1,199 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Webpage</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clark Daley | Professional Portfolio</title>
+    <style>
+        :root {
+            --u-red: #CC0000; /* University of Utah Red */
+            --charcoal: #333333;
+            --bg-light: #FAFAFA;
+            --white: #FFFFFF;
+            --border: #E0E0E0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--charcoal);
+            background-color: var(--bg-light);
+            padding: 40px 20px;
+        }
+
+        .portfolio-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 3px solid var(--u-red);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 2.4rem;
+            color: var(--charcoal);
+            margin-bottom: 5px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: var(--u-red);
+            font-weight: bold;
+        }
+
+        section {
+            margin-bottom: 35px;
+        }
+
+        section h2 {
+            font-size: 1.4rem;
+            color: var(--u-red);
+            margin-bottom: 15px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 5px;
+        }
+
+        .about-text {
+            text-align: justify;
+        }
+
+        .skills-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skills-list li {
+            background: var(--bg-light);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid var(--border);
+            border-left: 3px solid var(--u-red);
+        }
+
+        .project-card {
+            background: var(--bg-light);
+            padding: 20px;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+            margin-top: 15px;
+        }
+
+        .project-card h3 {
+            font-size: 1.15rem;
+            color: var(--charcoal);
+            margin-bottom: 5px;
+        }
+
+        .resume-status {
+            display: inline-block;
+            background: #FFF3CD;
+            color: #856404;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            border: 1px solid #FFEBAA;
+        }
+
+        .contact-info p {
+            margin-bottom: 8px;
+        }
+
+        .contact-info a {
+            color: var(--u-red);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.85rem;
+            color: #777777;
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+        }
+    </style>
 </head>
 <body>
 
-    <h1>Clark Daley</h1>
-    <p>Accounting Student</p>
-    <p>University of Utah</p>
+    <div class="portfolio-container">
+        <!-- Header Section -->
+        <header>
+            <h1>Clark Daley</h1>
+            <p>Accounting Student &bull; University of Utah</p>
+        </header>
 
-    <hr>
+        <!-- About Me Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p class="about-text">
+                I am an Accounting student at the University of Utah, driven by a passion for numbers and automation. My career interests center on data and consulting, where I aim to transform raw enterprise data into actionable strategic insights. I have a dislike for artificial intelligence, particularly the implementation of large language models to automate everyday decision-making. Technically, I enjoy the outdoors, lifting weights, and sports. Ultimately, I strive to hold a role in accounting or consulting where I can make an impact with the decisions I make.
+            </p>
+        </section>
 
-    <h2>About Me</h2>
-    <p>
-        I am an Accounting student at the University of Utah, driven by a passion for numbers and automation. My career interests center on data and consulting, where I aim to transform raw enterprise data into actionable strategic insights. I have a dislike for artificial intelligence, particularly the implementation of large language models to automate everyday decision-making. Technically, I enjoy the outdoors, lifting weights, and sports. Ultimately, I strive to hold a role in accounting or consulting where I can make an impact with the decisions I make.
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                <li>Tableau</li>
+                <li>GitHub</li>
+                <li>Microsoft Excel</li>
+            </ul>
+        </section>
 
-    <hr>
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project-card">
+                <h3>Lambda Startup Competition</h3>
+                <p>Collaborated with an international team to develop and market a business concept.</p>
+            </div>
+        </section>
 
-    <h2>Skills</h2>
-    <ul>
-        <li>Tableau</li>
-        <li>GitHub</li>
-        <li>Microsoft Excel</li>
-       
-    </ul>
+        <!-- Resume Section -->
+        <section id="resume">
+            <h2>Resume</h2>
+            <div class="resume-status">📄 Resume coming soon</div>
+        </section>
 
-    <hr>
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <div class="contact-info">
+                <p>University email: <a href="mailto:clark.daley@utah.edu">clark.daley@utah.edu</a></p>
+                <p>LinkedIn: <a href="https://linkedin.com/clarkdaley" target="_blank" rel="noopener noreferrer">My LinkedIn Profile</a></p>
+                <p>GitHub profile: <a href="https://github.com/clarkdaley" target="_blank" rel="noopener noreferrer">My GitHub Profile</a></p>
+            </div>
+        </section>
 
-    <h2>Projects</h2>
-    
-    <h3>Lambda Startup Competition</h3>
-    <p>Collaborated with an international team to develop and market a business concept</p>
-    
-
-    <hr>
-
-    <h2>Resume</h2>
-    <p>Resume coming soon</p>
-
-    <hr>
-
-    <h2>Contact</h2>
-    <p>University email: clark.daley@utah.edu</p>
-    <p>LinkedIn: <a href="https://linkedin.com/clarkdaley">My LinkedIn Profile</a></p>
-    <p>GitHub profile: <a href="https://github.com/clarkdaley">My GitHub Profile</a></p>
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2026 Clark Daley. Academic Portfolio.</p>
+        </footer>
+    </div>
 
 </body>
 </html>
